@@ -27,5 +27,8 @@ namespace JurosCompostos.Controllers
 
             return Json(Math.Round(valorFinal,2).ToString("0.00"));
         }
+
+
+
     }
 }

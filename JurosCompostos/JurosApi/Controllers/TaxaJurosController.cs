@@ -17,7 +17,7 @@ namespace JurosCompostos.Controllers
 
         [Route("ObterTaxaAtual")]
         [HttpGet]
-        public ActionResult Index()
+        public  ActionResult Index()
         {
 
             var TaxaAtual = _configuration["Parametros:TaxaAtual"];
