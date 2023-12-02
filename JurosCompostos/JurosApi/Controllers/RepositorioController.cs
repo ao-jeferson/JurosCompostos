@@ -19,7 +19,7 @@ namespace Api.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            var RepoGitHub = _configuration["Parametros:TaxaAtual"];
+            var RepoGitHub = _configuration["Parametros:RepoGitHub"];
             return Json(RepoGitHub);
         }
 
