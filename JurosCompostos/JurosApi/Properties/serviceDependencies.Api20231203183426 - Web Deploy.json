@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "apis1": {
+      "apiEndpoint": "https://apijuroscompostos.azure-api.net/juroscompostos.azurewebsites.net",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.ApiManagement/service/ApiJurosCompostos/apis/Api",
+      "type": "apis.azure"
+    }
+  }
+}
