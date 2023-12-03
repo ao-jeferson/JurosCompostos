@@ -4,7 +4,7 @@ using Microsoft.Extensions.Configuration;
 
 namespace JurosCompostos.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("/")]
     [ApiController]
     public class TaxaJurosController : Controller
     {

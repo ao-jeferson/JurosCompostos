@@ -5,7 +5,7 @@ using System;
 
 namespace JurosCompostos.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("/")]
     [ApiController]
     public class CalculaJurosController : Controller
     {
@@ -17,10 +17,9 @@ namespace JurosCompostos.Controllers
 
         //Valor Final = Valor Inicial * (1 + juros) ^ Tempo
         [HttpGet]
-        [Route("Calcula Juros")]
+        [Route("CalculaJuros")]
         public ActionResult JurosPeriodo(double ValorInicial, int TempoEmMeses)
         {
-
             double JurosAtual = Convert.ToDouble(_configuration["Parametros:TaxaAtual"].Replace("%",""));
 
             double valorFinal = ValorInicial * Math.Pow(1 + (JurosAtual / 100), TempoEmMeses);
@@ -28,6 +27,13 @@ namespace JurosCompostos.Controllers
             return Json(Math.Round(valorFinal,2).ToString("0.00"));
         }
 
+        [Route("showmethecode")]
+        [HttpGet]
+        public ActionResult Index()
+        {
+            var RepoGitHub = _configuration["Parametros:RepoGitHub"];
+            return Json(RepoGitHub);
+        }
 
 
     }
